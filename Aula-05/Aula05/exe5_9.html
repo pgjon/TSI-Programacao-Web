@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#borderimg1 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(imagens/borda.png) 10 round; /*source, slice, repeat*/
+}
+
+
+#borderimg2 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(imagens/borda.png) 30 round; 
+}
+
+#borderimg3 {
+  border: 10px solid transparent;
+  padding: 15px;
+  border-image: url(imagens/borda.png) 5 round;
+}
+</style>
+</head>
+<body>
+
+<p id="borderimg1">border-image</p>
+<p id="borderimg2">border-image</p>
+<p id="borderimg3">border-image</p>
+
+<p><strong>Nota:</strong> O Internet Explorer 10 é versões anteriores não oferecem suporte à propriedade border-image.</p>
+
+</body>
+</html>

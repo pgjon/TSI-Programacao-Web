@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt - BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="description" content="Formulário para preenchimento de dados de usuário">
+    <meta name="author" content="Jones">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício - 8</title>
+</head>
+
+<body>
+    <!--Início do formulário-->
+    <form action="dados.php"></form>
+        <!-- Seleção do tipo radio para saber o gosto sobre o site -->
+        <h3>O que você achou do site??</h3>
+        <input type="radio"> Muito bom
+        <input type="radio"> Bom
+        <input type="radio"> Regular
+        <input type="radio"> Um Lixo
+        <!-- Seleção única para saber qual melhor seção junto a uma caixa de texto caso não tenha a opção -->
+        <h3>Qual seção você mais gostou??</h3>
+        <select name="secao">
+            <option value="cartaz" chechek>Em Cartaz</option> 
+            <option value="trilha">Trilha Sonora</option>
+            <option value="fotos">Galeria de Fotos</option>
+            <option value="bilheteria">Bilheteria</option>
+        </select>
+        &nbsp;Outra <input type="text">
+        <!-- Caixa de texto para comentário / sugestões -->
+        <h3>Digite seus comentários no campo abaixo:</h3>
+        <textarea name="comentarios" id="comentarios" rows="5" cols="50"></textarea>
+        <!-- Inputs para nome, email e fone -->
+        <h3>Diga-nos como entrar em contato com você: </h3>
+        Nome: <input type="text"><br>
+        &nbsp;&nbsp;&nbsp;E-mail: <input type="email"><br>
+        Fone: <input type="tel">
+        <!-- Checkbox para receber novidades via email -->
+        <p><input type="checkbox"> Quero receber as novidades do site por e-mail</p>
+    </form>
+    <!-- Botões para enviar os dados ou resetar o preenchimento -->
+    <input type="submit" value="Enviar Dados">
+    <input type="reset" value="Limpar Formulário">
+</body>
+</html>

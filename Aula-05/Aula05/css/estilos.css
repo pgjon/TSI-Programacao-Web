@@ -1,0 +1,46 @@
+/* Arquivo CSS */
+
+body{
+	
+	background: white;
+	color: green;
+    font-size: 20px;
+	
+}
+
+p{
+    
+    color: blue;
+}
+
+
+.destaque{      
+	background-color: red;
+    font-family: fantasy;
+    font-size: 20px;
+    font-weight: 300;
+        
+}
+
+
+#cabecalho {
+
+	background-color: gray;
+	font-weight: bold;
+}
+
+#rodape {
+      
+    background-color: yellow;
+    font-family: sans-serif;
+    font-size: 50px; 
+    
+}
+
+#conteudo {
+    background-color: lightblue;
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 10px;
+}

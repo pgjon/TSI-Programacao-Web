@@ -1,0 +1,35 @@
+/* Herança e seletores */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin-left: 25px;
+    background-color: #f4f4f4;
+}
+
+/* Estilização dos textos */
+h1 {
+    color: rgb(255, 0, 0);
+}
+
+h2 {
+    display: inline-block; /* Mantém a borda junto ao texto */
+    color: rgb(0, 28, 188);
+    border: 2px solid black;
+    border-radius: 20px; 
+    padding: 5px;
+}
+
+p {
+    text-align: justify; /* tira o páragrado do centro justificando a esquerda*/
+    color: darkslategray;
+    font-size: 16px;
+}
+
+/* Estilização da imagem */
+.imagem {
+    display: block; /* transforma a imagem em um bloco, permitindo controle total sobre margens. */
+    margin: 50px auto; /* centraliza a imagem horizontalmente com 50px em margin do top */
+    width: 50%; /* define a largura da imagem como 50% do contêiner pai */
+    border-radius: 10px; /* aplica bordas arredondadas à imagem */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* adiciona sombra à imagem */
+}
