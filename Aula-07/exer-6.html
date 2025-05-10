@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Exercício 6 - Aula 07">
+    <meta name="keywords" content="HTML, CSS, Exercício, Aula 07">
+    <meta name="author" content="Jones Rodrigues">
+    <title>Exercício 6 - Aula 07</title>
+
+    <style>
+        .Estados {
+            width: 100%;
+        }
+
+        .Estados tr, td, th {
+            text-align: center;
+            border: 2px solid rgb(195, 195, 195);
+            padding: 5px;
+            border-spacing: 10;
+            border-collapse: collapse;
+        }
+
+        .Estados th {
+            font-family: sans-serif;
+            color: white;
+            background-color: black;
+        }
+
+        .Estados tr:hover {
+            background-color: yellow;
+        }
+
+        .titulo {
+            padding: 5px;
+            background-color: rgb(195, 195, 195);
+        }
+
+    </style>
+</head>
+<body>
+    <table class="Estados">
+        <caption class="titulo">ESTADOS DA REGIÃO SUL</caption>
+        <tr>
+            <th scope="col" style="width: 50%;">Estado</th>
+            <th scope="col" style="width: 10%;">Sigla</th>
+            <th scope="col" style="width: 40%;">Capital</th>
+        </tr>
+        
+        <tr>
+            <td>Rio Grande do Sul</td>
+            <td>RS</td>
+            <td>Porto Alegre</td>
+        </tr>
+
+        <tr>
+            <td>Santa Catarina</td>
+            <td>SC</td>
+            <td>Florianópolis</td>
+        </tr>
+
+        <tr>
+            <td>Paraná</td>
+            <td>PR</td>
+            <td>Curitiba</td>
+        </tr>
+    </table>
+</body>
+</html>

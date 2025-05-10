@@ -1,0 +1,57 @@
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Exemplo - Tabelas CSS</title>
+	<style type="text/css">
+		.compra {
+			border-spacing: 10;
+			border-collapse:separate;  /*collapse*/;
+			}
+
+		.compra th, .compra td {
+			border: 5px solid #F30;
+			padding: 3px;
+		}
+        
+        .total {
+            font-size:30px;
+            font-family: fantasy;
+            color: blue;
+            border: 2px solid blue;
+            padding: 5px;
+            background-color: yellow;
+            
+        }
+        
+
+	</style>
+</head>
+<body>
+	
+<table class="compra">
+	<tr>
+		<th scope="col">Produto</th>
+		<th scope="col">Valor Un.</th>
+		<th scope="col">Quantidade</th>
+		<th scope="col">Subtotal</th>
+	</tr>
+	<tr>
+		<td>Objeto A</td>
+		<td>R$100,00</td>
+		<td>3</td>
+		<td>R$300,00</td>
+	</tr>
+	<tr>
+		<td>Objeto B</td>
+		<td>R$200,00</td>
+		<td>2</td>
+		<td>R$400,00</td>
+	</tr>
+	<tr class="total">
+		<th scope="row" colspan="3">Valor</th>
+		<td>R$700,00</td>
+	</tr>
+</table>
+
+</body>
+</html>
