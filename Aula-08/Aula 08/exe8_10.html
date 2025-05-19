@@ -1,0 +1,48 @@
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exemplo - Menu Vertical</title>
+    <style>
+      .vertical-menu {
+        display: flex;
+        justify-content: space-between;
+        background-color: black;
+      }
+
+      .logo {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+      }
+      
+      .vertical-menu a,
+      ul {
+        display: flex;
+        color: white;
+        font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+        font-size: 20px;
+        list-style: none;
+        padding: 10px;
+        text-decoration: none;
+      }
+
+      .vertical-menu a:hover {
+        background-color: #ff0000;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav class="vertical-menu">
+      <a href="logo" class="logo">LOGO</a>
+      <ul>
+        <li><a href="#">IFSUL</a></li>
+        <li><a href="#">Campus</a></li>
+        <li><a href="#">Ensino</a></li>
+        <li><a href="#">Vestibular</a></li>
+        <li><a href="#">Contato</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>

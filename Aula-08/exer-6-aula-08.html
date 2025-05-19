@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aula 08 - Exercício 6" />
+    <meta name="author" content="Jones Rodrigues" />
+    <meta name="keywords" content="HTML, CSS" />
+    <title>Aula 08 - Exercício 6</title>
+    <style>
+      body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(247, 223, 193);
+      }
+      ul {
+        display: block;
+        padding: 0;
+        margin: 0;
+      }
+      li {
+        display: inline-block;
+        margin: 0;
+        list-style: none;
+      }
+      .tooltip {
+        background-color: #858585;
+        border-top: 1px solid red;
+        border-left: 1px solid red;
+        border-right: 1px solid red;
+        text-decoration: none;
+        color: white;
+        padding: 2px;
+        position: relative; /* Adicionado para posicionar a tooltip corretamente */
+      }
+
+      /* Estilo da Tooltip */
+      .tooltip .tooltip-text {
+        border-right: black 1px solid;
+        border-left: black 1px solid;
+        border-top: black 1px solid;
+        
+        visibility: hidden;
+        width: 140px;
+        background-color: rgb(255, 245, 232);
+        color: #000000;
+        text-align: center;
+        padding: 3px;
+        position: absolute;
+        z-index: 1;
+        top: 110%; /* Posição acima do link */
+        left: 50%;
+        margin-left: 30px;
+        opacity: 0;
+        transition: opacity 0.3s;
+        font-size: 12px;
+      }
+      .tooltip:hover {
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+        border-right: 1px solid black;
+        text-decoration: none;
+        color: #000000;
+        background-color: #cccccc;
+      }
+      .tooltip:hover .tooltip-text {
+        visibility: visible;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="menu">
+        <ul>
+          <li>
+            <a href="#" class="tooltip"
+              >Home
+              <span class="tooltip-text">Voltar ao Início</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="tooltip"
+              >CSS Tutorial
+              <span class="tooltip-text">Área de tutorial CSS</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="tooltip"
+              >CSS Layout
+              <span class="tooltip-text">Área de Layouts CSS</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="tooltip"
+              >CSS Links
+              <span class="tooltip-text">Tudo sobre Links CSS</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="tooltip"
+              >CSS Menu
+              <span class="tooltip-text">Como construir um Menu CSS</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="tooltip"
+              >CSS Print
+              <span class="tooltip-text">Impressão CSS</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="tooltip"
+              >CSS @import
+              <span class="tooltip-text">Importação CSS</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="tooltip"
+              >Contato
+              <span class="tooltip-text">Entre em Contato</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Exemplo - Contadores</title>
+	<style>
+		body {
+            counter-reset:num;
+        } 
+        p.numbered::before{
+         content: counter(num) ": ";
+         counter-increment: num; 
+         font-weight: bold;
+        }
+	</style>
+</head>
+<body>
+	
+
+<p class = "numbered"> Introdução </p> 
+<p class = "numbered"> Justificativa </p> 
+<p class = "numbered"> Objetivo </p> 
+<p class = "numbered"> Objetivo Específico</p> 
+<p class = "numbered"> Metodologia </p>
+
+</body>
+</html>

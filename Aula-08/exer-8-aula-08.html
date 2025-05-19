@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Aula 08 - Exercício 8" />
+    <meta name="author" content="Jones Rodrigues" />
+    <meta name="keywords" content="HTML, CSS" />
+    <title>Aula 08 - Exercício 8</title>
+
+    <style>
+      .div-ul {
+        margin: 10px auto;
+        color: white;
+        background-color: #000000;
+        padding: 10px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        width: 400px;
+      }
+
+      .ul li {
+        background-color: #474747;
+        list-style-type: decimal;
+        padding: 3px;
+        padding-left: 10px;
+        margin-right: 10px;
+      }
+      /* Café */
+      #cafe {
+        list-style: none; /* Remove o marcador padrão */
+        position: relative;
+      }
+
+      #cafe::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 50px; /* Defina o tamanho desejado */
+        height: 50px;
+        margin-right: 8px;
+        background-image: url("https://cdn.pixabay.com/photo/2016/03/30/21/59/coffee-beans-1291656_1280.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      /* Feijão */
+      #feijao {
+        list-style: none; /* Remove o marcador padrão */
+        position: relative;
+      }
+
+      #feijao::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 50px; /* Defina o tamanho desejado */
+        height: 50px;
+        margin-right: 8px;
+        background-image: url("./Jones-Exercicios-Aula-08/svg-feijao.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      /* Arroz */
+      #arroz {
+        list-style: none; /* Remove o marcador padrão */
+        position: relative;
+      }
+
+      #arroz::before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        width: 50px; /* Defina o tamanho desejado */
+        height: 50px;
+        margin-right: 8px;
+        background-image: url("https://cdn.pixabay.com/photo/2020/05/29/19/33/rice-5236375_1280.jpg");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+
+      #cafe::before,
+      #feijao::before,
+      #arroz::before {
+        transition: width 0.2s, height 0.2s;
+      }
+
+      #cafe:hover::before,
+      #feijao:hover::before,
+      #arroz:hover::before {
+        width: 100px; /* Novo tamanho ao passar o mouse */
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <div class="div-ul">
+        <h1>Lista do Mercado</h1>
+        <ul class="ul">
+          <li id="cafe">Café</li>
+          <li id="feijao">Feijão</li>
+          <li id="arroz">Arroz</li>
+        </ul>
+      </div>
+    </nav>
+  </body>
+</html>

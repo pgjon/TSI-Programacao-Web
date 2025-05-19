@@ -1,0 +1,52 @@
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Exemplo - Formulários e Seus Elementos</title>
+	<style>
+		.grupo{
+			font-size: 20;
+			font-family: fantasy;
+			color:green;
+		}
+		.grupo1{
+			font-size: 20;
+			font-family: unset;
+			color: orange;
+			border: 2px solid blue;
+            padding: 5px;
+            background-color: brown;
+		
+		
+		}
+
+	</style>
+</head>
+<body>
+
+<form action="#" method="post">
+	<fieldset class="grupo">
+		<legend>Dados Gerais</legend>
+		
+		<input type="text" name="nome" size="30" maxlength="30">
+		<br>
+		<input type="file" name="arquivo" size="30">
+	</fieldset>
+	<fieldset class="grupo1">
+		<legend>Dados de Endereço</legend>
+		
+		<input type="radio" name="radio"> Escolha 1
+		<input type="radio" name="radio" checked> Escolha 2
+		<input type="radio" name="radio"> Escolha 3
+		<br>
+		<input type="checkbox" name="checkbox"> Escolha 1
+		<input type="checkbox" name="checkbox" checked> Escolha 2
+		<input type="checkbox" name="checkbox"> Escolha 3		
+	</fieldset>
+    
+	<input type="submit" value="Enviar">
+	<input type="reset" value="Cancelar">
+
+</form>
+
+</body>
+</html>
