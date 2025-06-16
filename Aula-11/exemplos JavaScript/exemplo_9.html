@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JavaScript 9</title>
+<script type="text/JavaScript">
+
+function mostraNome(nome){  // escopo da função mostraNome com um parâmetro "nome"
+	if (nome=="") //se o conteúdo de nome for vazio ou nulo 
+		return "erro";          // retorna para a chamada da função a palavra "erro"
+	else
+		return nome;        // caso contrário retorna o valor passado para o parâmetro "nome"
+}
+
+texto=prompt("digite o nome: "); //conteúdo do campo prompt sendo armazenado 
+									// na variável "texto"
+
+var retorno=mostraNome(texto); // chamada da função passando como argumento o nome digitado
+
+alert(retorno);              //alerta da variável que recebe o retorno da função
+				             //pode ser o nome digitado ou a palavra "erro"
+
+
+</script>
+</head>
+<body>
+Este é o corpo da Página HTML   
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

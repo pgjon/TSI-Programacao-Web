@@ -1,0 +1,379 @@
+/*
+-- Estilos CSS - Website do IFSUL
+*/
+
+/*
+-- Padrões e Reset
+*/
+
+/* 1 - Zerar as margens retirar os marcadores das listas tirar bordas e subtitulos retirar negrito*/
+* {margin: 0; padding: 0;}        
+ul {list-style-type: none;}       
+img, fieldset {border: 0;}        
+h1, h2, h3, h4, h5, h6 {font-weight: normal;}  
+  
+/*
+-- Tipografia e Cores
+*/
+
+/* 14 - Estilizando Fontes*/ 
+
+body {
+	font-family: Candara, Verdana, sans-serif;
+}
+
+p {
+	font-size: 1em;
+	margin-bottom: 1.5em;
+	line-height: 1.4em;
+    text-align: justify;
+}
+
+#conteudo-principal h1 {
+    font-size: 2.25em;
+    margin-bottom: 0.5em;
+  }
+
+#conteudo-principal h2,
+#conteudo-secundario h1 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+#cocnteudo-secundario {
+    padding: 0.3125em;
+}
+
+#conteudo-principal ul,
+#conteudo-principal ol {
+    font-size: 1em;
+    margin-left: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+/*
+-- Estrutura
+*/
+
+
+ /*2 e 3 -Lagura da página fixa 960px  
+ margem superior e inferior 0 e esquerda e direita auto para central    */                             
+#cabecalho, #conteudo, #rodape {
+	width: 60em;          
+	margin: 0 auto;        
+}
+
+/* 3 - Foto do campus */
+   #foto-principal {
+	height: 21.875em;
+	background: #b6b6b6 url("../imagens/foto_ifsul.jpg") no-repeat center top;
+}
+
+ /* 4 - rodape-fora ocupar toda largura ver HTML */
+#rodape-fora {
+    background: #808080;
+}
+
+/* 5 - Cabeçalho com posicionamento relativo */
+#cabecalho {
+	position: relative;
+}
+
+/* 6 - Flutuar a logomarca para a esquerda - logo */
+#logo {
+    padding: 0.3125em 0; /*5px*/
+    display: block;
+    float: left;
+}
+
+#logo img {
+    display: block;
+}
+
+/* 8 - Posicionando o menu principal */
+#menu-principal {
+	position: absolute;
+	top: 1.625em;  /*26px*/
+	right: 0;
+}
+
+/*9 - Estilizando o menu principal - menu-pricipal */
+#menu-principal li {
+    display: inline;
+}
+
+#menu-principal a {
+    display: block;
+    float: left;
+    font-size: 1.125em;  /*18px*/
+    text-decoration: none;
+    color: green;
+    margin-left: 2em; /*32px*/
+
+    /**/
+    border: 2px solid green;  
+    border-radius: 1.875em; /*30px*/
+    padding: 0.625em;  /*10px*/
+}
+
+/*10 - Estilizando o menu principal  - menu-pricipal hover e ativo  */
+#menu-principal a:hover, #menu-principal a.ativo {
+    color: green;
+    font-weight: bold;
+}
+
+#menu-principal a.ativo {
+    font-weight: bold;
+} 
+
+/*11 - Dividir em duas partes: conteúdo principal e conteúdo secundário*/ 
+
+#conteudo {
+    margin: 1.875em auto;
+}
+
+#conteudo-principal {
+    float: left;
+    width: 38.75em; /*620px*/
+    padding: 1.25em;  /*20px*/
+}
+
+#conteudo-secundario {
+    float: right;
+    width: 17.5em; /*280px*/
+}
+
+/*12 - Estilizando rodapé */
+#telefone-email {
+    float: left;
+    font-size: 1em;
+    color: #FFF;
+    margin: 0.75em 0;  /*12px*/
+}
+
+#telefone-email span.ddd {
+    font-size: 0.8em;
+}
+
+#endereco {
+    float: right;
+    text-align: right;
+    color: #FFF; 
+    font-size: 0.875em; /*14px*/
+    margin: 0.75em 0;
+}
+
+/*13 - Estilizando rodapé - parte 02 */
+#copyright {
+    font-size: 0.75em;
+    color: #d9d9d9;
+    clear: both;
+    display: block;
+    padding: 1em 0;
+}
+
+/*
+-- Estilos específicos de Seção
+*/
+
+/*11 - Colocar a cor de fundo menu secundário:  parte 02*/
+
+#bd-home #conteudo-secundario {
+    padding: 0.625em; /*10px*/
+    background: green;
+    color: #FFF;
+}
+
+/*11 - Colocar a cor amarela no Saiba Mais:  parte 03 */
+#bd-home #conteudo-secundario a {
+    color: #FF0;
+}
+
+/*
+-- Formulários
+*/
+
+.form-container {
+    max-width: 37.5em;  /*600px*/
+    margin: 1.25em auto;
+    padding: 1.25em;
+    border: 1px solid #ccc;
+    border-radius: 0.3125em;  /*5px*/
+}
+
+.contato {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 28.125em; /*450px*/
+    margin-bottom: 1em;
+}
+
+.input-group {
+    max-width: 28.125em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1em;
+}
+
+h3.tittle {
+    color: green;
+    margin-bottom: 1.25em;  /*20px*/
+    font-weight: bold;
+}
+
+.input-group label {
+    color: green;
+    display: block;
+    margin-bottom: 0.3125em;  /*5px*/
+    text-align: left;
+}
+
+.input-field {
+    width: 100%;
+    padding: 0.3125em;
+    box-sizing: border-box;
+}
+
+.comentario {
+    display: block;
+    max-width: 28.125em;
+}
+
+.comentario textarea {
+    max-width: 28.125rem; /*450px*/
+    box-sizing: border-box;
+    border-radius: 0.625em; /*10px*/
+    padding: 0.1875em;  /*3px*/
+    border-color: green;
+}
+
+#comentario {
+    max-width: 28.125rem; 
+}
+
+.comentario h3 {
+    color: green;
+    margin-bottom: 0.3125em;
+}
+
+.buttons {
+    margin-top: 0.625em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    background-color: white;
+    color: green;
+    padding: 0.75em 1.25em;  /*12px 20px*/
+    border: 1px solid green;
+    border-radius: 1.875em; /*30px*/
+    cursor: pointer;
+    margin-right: 0.625em; /*10px*/
+    transition: background-color 0.3s;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: white;
+    color: green;
+    padding: 0.75em 1.25em;  /*12px 20px*/
+    border: 1px solid green;
+    border-radius: 1.875em; /*30px*/
+    cursor: pointer;
+    margin-right: 0.625em; /*10px*/
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    font-weight: bold;
+}
+
+.checkbox-group {
+    margin-top: 1em; /*16px*/
+    max-width: 28.125em; /*450px*/
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.checkbox-group input {
+    margin-right: 0.3125em;  /*5px*/
+}
+
+/*
+-- Tabelas Câmpus IFSul
+*/
+
+.campus-ifsul {
+    margin-left: 3.125em; /*50px*/
+    padding: 0.625em; /*10px*/
+}
+
+.campus-ifsul h1 {
+    color: green;
+    font-weight: bold;
+}
+
+.campus-ifsul a {
+    text-decoration: none;
+    color: green;
+}
+
+.campus-ifsul a:hover {
+    font-weight: bold;
+}
+
+.campus-ifsul li {
+    padding: 0.1875em;  /*3px*/
+}
+
+.campus-ifsul li::marker {
+    color: green;
+}
+/*
+-- Tabela Cursos IFSul
+*/
+
+.cursos {
+    width: 80%;
+    border-collapse: collapse;
+    margin: 1.25em auto;  /*20px*/
+}
+.cursos caption {
+    font-size: 1.5em; /*24px*/
+    color: green;
+    font-weight: bold;
+    margin-bottom: 0.625em; /*10px*/
+    text-align: left;
+}
+.cursos th,
+.cursos td {
+    border: 1px solid green;
+    padding: 0.625em; /*10px*/
+    text-align: left;
+}
+.cursos tr:hover td {
+    background-color: #e0e0e0;
+}   
+.cursos th {
+    background-color: green;
+    color: white;
+}
+.cursos tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* 7 -  Para que a flutuação da Logo  seja finalizada - grupo */
+ .grupo::before, .grupo::after  {
+    content: " ";
+    display: block;
+}
+
+.grupo::after {
+    clear: both; 
+}

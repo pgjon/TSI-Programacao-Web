@@ -1,0 +1,121 @@
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Contato - Site do IFSUL</title>
+	<link href="css/layout.css" rel="stylesheet">
+</head>
+
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<title>Home - Site do IFSUL</title>
+	<link href="css/layout.css" rel="stylesheet">
+</head>
+<body id="bd-home">
+
+<div id="site">
+	<header id="cabecalho" class="grupo">
+		<a href="index.html" id="logo">
+			<img src="imagens/logo-ifsul.jpg" alt="Logomarca do IFSUL">
+		</a>
+		<div id="menu-principal">
+			<ul class="grupo">
+				<li>
+					<a class="ativo" href="home.html">Missão</a>
+				</li>
+				<li>
+					<a href="campus.html">Campus</a>
+				</li>
+				<li>
+					<a href="cursos.html">Cursos</a>
+				</li>
+				<li>
+					<a href="contato.html">Contato</a>
+				</li>
+			</ul>
+		</div>
+	</header>
+
+	<div id="foto-principal"></div>
+	
+	<div class="form-container">
+            <!--Início do formulário-->
+            <form action="dados.php">
+                <!-- Inputs para nome, email e fone -->
+                <h3 class="tittle">Diga-nos como entrar em contato com você</h3>
+
+                <div class="contato">
+                    <div class="input-group">
+                        <label for="nome">Nome:</label>
+                        <input type="text" id="nome" name="nome" placeholder="Nome" class="input-field">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="sobrenome">Sobrenome:</label>
+                        <input type="text" id="sobrenome" name="sobrenome" placeholder="Sobrenome" class="input-field">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required
+                            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" placeholder="exemple@exemple.com"
+                            class="input-field">
+                    </div>
+
+                    <div class="input-group">
+                        <label for="contato">Contato:</label>
+                        <input type="tel" id="contato" name="contato" placeholder="(XX) XXXXX-XXXX" class="input-field">
+                    </div>
+
+					<div class="comentario"><!-- Caixa de texto para comentário / sugestões -->
+                		<h3>Digite seus comentários no campo abaixo:</h3>
+                		<textarea name="comentarios" id="comentarios" rows="5" cols="60" required
+                    	placeholder="Escreva seus comentários aqui..."></textarea>
+					</div>
+                    <!-- Checkbox para concordar com os termos -->
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="termos" name="termos">
+                        <label for="termos">Li e concordo com os termos</label>
+                    </div>
+
+                    <!-- Checkbox para receber novidades via email -->
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="novidades" name="novidades">
+                        <label for="novidades">Quero receber as novidades do site por e-mail</label>
+                    </div>
+
+                    <!-- Botões para enviar os dados ou resetar o preenchimento -->
+                    <div class="buttons">
+                        <input type="submit" value="Enviar Dados">
+                        <input type="reset" value="Limpar Formulário">
+                    </div>
+                </div>
+            </form>
+        </div>
+    
+	  
+	<div id="rodape-fora">
+         <footer id="rodape">
+			<p id="telefone-email">
+				contato@ifsul.edu.br
+				<br>
+				<span class="ddd">53</span> 3026.6050
+			</p>
+
+			<p id="endereco">
+				Rua Gonçalves Chaves, 3218 
+				<br>
+				CEP 96015-560
+				<br>
+				Pelotas - RS
+			</p>
+
+			<small id="copyright">
+				&copy; IFSUL - Instituto Federal Sul-rio-grandense.s
+			</small>
+		</footer>
+	</div>
+</div>
+
+</body>
+</html>
