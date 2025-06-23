@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        body {
+            background-color: grey;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        form {
+            background-color: lightgrey;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        #lb-nome, #lb-sobrenome {
+            margin-left: 30px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: yellowgreen;
+            /* -webkit-text-stroke: 1px black; */
+            text-shadow: 1px 1px 2px black;
+            display: block;
+        }
+
+        #nome, #sobrenome {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: black;
+            background-color: white;
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 25px;
+        }
+
+        #btn-enviar {
+            display: block;
+            margin: 0 auto;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: white;
+            background-color: yellowgreen;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+    </style>
+  </head>
+  <body>
+    <form onsubmit="return validateForm()" id="form">
+      <label for="nome" id="lb-nome">Nome</label>
+      <input type="text" id="nome" name="nome"><br>
+
+      <label for="sobrenome" id="lb-sobrenome">Sobrenome</label>
+      <input type="text" id="sobrenome" name="sobrenome"><br>
+
+      <input type="submit" value="Enviar" id="btn-enviar">
+    </form>
+
+    <script>
+      // Crie a função validateForm(), digite um nome, caso o campo estiver vazio ao enviar (Submit) emitir alert().
+      
+      function validateForm() {
+        // Obtém o valor do campo nome
+        const nome = document.getElementById("nome").value.trim();
+        const sobrenome = document.getElementById("sobrenome").value.trim();
+
+        // Verifica se o campo está vazio
+        if (nome === "" || sobrenome === "") {
+          alert("Por favor, preencha todos os campos!");
+          return false; // Impede o envio do formulário
+        }
+
+        return true; // Permite o envio do formulário
+      }
+    </script>
+  </body>
+</html>

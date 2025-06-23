@@ -44,17 +44,10 @@
             border-radius: 25px;
         }
 
-        input[type="submit"] {
-            display: block;
-            margin: 0 auto;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 20px;
-            color: white;
-            background-color: yellowgreen;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 25px;
-            cursor: pointer;
+        #number::placeholder {
+            margin-left: 10px;
+            color: #888;
+            font-style: italic;
         }
 
         /* Para Chrome, Edge, Safari */
@@ -79,47 +72,36 @@
         }        
     </style>
     <script>
-        function toCelsius() {
-        /*  Crie a função toCelsius(), digite a temperatura em Fahrenheit e converta para Celsius,           
-            conforme exibido abaixo:
-            
-            Fórmula: C =  (5/9) * (f-32); 
-        */
+        function toCelsiusInstant() {
             let number = document.getElementById("number").value.trim();
-            let celsius;
-
+            let resultado = document.getElementById("resultado");
             if (number === '') {
-                document.getElementById("resultado").textContent = "Por favor, digite uma temperatura!";
-                return false;
+                resultado.textContent = '';
+                return;
             }
-
+            
             number = parseFloat(number);
-
-            celsius = (5/9) * (number - 32);
-
-            // Exibe o resultado no elemento com id "resultado"
-            document.getElementById("resultado").textContent = `${number}°F = ${celsius.toFixed(2)}°C`;
-
-            return false; // Impede o envio do formulário
+            if (isNaN(number)) {
+                resultado.textContent = "Por favor, digite uma temperatura!";
+                return;
+            }
+    
+            let celsius = (5/9) * (number - 32);
+            resultado.textContent = `${number}°F = ${celsius.toFixed(2)}°C`;
         }
 
-        // Adiciona um evento de escuta para limpar o resultado quando o campo perde o foco
-        // window.onload = function() {
-        //     document.getElementById("number").addEventListener("blur", function() {
-        //         if (this.value.trim() === "") {
-        //             document.getElementById("resultado").textContent = "";
-        //         }
-        //     });
-        // };
-        
+        // Atualiza instantaneamente ao digitar
+        window.onload = function() {
+            document.getElementById("number").addEventListener("input", toCelsiusInstant);
+        };
     </script>
 </head>
+
 <body>
-    <form onsubmit="return toCelsius()">
+    <form>
         <div id="conversao">
             <span id="fahrenheit">Digite temperatura em Fahrenheit</span><br>
             <input type="number" id="number" step="any" placeholder="Ex: 100">
-            <input type="submit" value="Converter">
             <p id="resultado"></p> <!-- Elemento para exibir o resultado -->
         </div>
     </form>

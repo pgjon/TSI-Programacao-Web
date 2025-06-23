@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        /* 1)   Crie a função toFatorial(), que peça para digitar um número e devolva o Fatorial deste, no 
+                console.log.
+        */
+
+        function toFatorial() {
+            let num = prompt("Digite primeiro número :");
+            let fatorial, i;
+            fatorial = 1;
+
+            for (i = num; i > 1; i--) {
+                fatorial *= i;
+            }
+
+            console.log("Fatorial de " + num + " é " + fatorial);
+        }
+        toFatorial();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
