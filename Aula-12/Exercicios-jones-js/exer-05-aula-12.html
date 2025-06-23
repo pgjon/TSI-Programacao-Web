@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahrenheit para Celsius</title>
+    <style>
+        body {
+            background-color: grey;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+
+        form {
+            background-color: lightgrey;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        #fahrenheit {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: yellowgreen;
+            text-shadow: 1px 1px 2px black;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        #number {
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: black;
+            background-color: white;
+            border: 1px solid black;
+            padding: 5px;
+            border-radius: 25px;
+        }
+
+        input[type="submit"] {
+            display: block;
+            margin: 0 auto;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: white;
+            background-color: yellowgreen;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 25px;
+            cursor: pointer;
+        }
+
+        /* Para Chrome, Edge, Safari */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        /* Para Firefox */
+        input[type="number"] {
+            appearance: textfield;
+            -moz-appearance: textfield;
+        }
+
+        #resultado {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            color: black;
+            margin-top: 15px;
+        }        
+    </style>
+    <script>
+        function toCelsius() {
+        /*  Crie a função toCelsius(), digite a temperatura em Fahrenheit e converta para Celsius,           
+            conforme exibido abaixo:
+            
+            Fórmula: C =  (5/9) * (f-32); 
+        */
+            let number = document.getElementById("number").value.trim();
+            let celsius;
+
+            if (number === '') {
+                document.getElementById("resultado").textContent = "Por favor, digite uma temperatura!";
+                return false;
+            }
+
+            number = parseFloat(number);
+
+            celsius = (5/9) * (number - 32);
+
+            // Exibe o resultado no elemento com id "resultado"
+            document.getElementById("resultado").textContent = `${number}°F = ${celsius.toFixed(2)}°C`;
+
+            return false; // Impede o envio do formulário
+        }
+
+        // Adiciona um evento de escuta para limpar o resultado quando o campo perde o foco
+        // window.onload = function() {
+        //     document.getElementById("number").addEventListener("blur", function() {
+        //         if (this.value.trim() === "") {
+        //             document.getElementById("resultado").textContent = "";
+        //         }
+        //     });
+        // };
+        
+    </script>
+</head>
+<body>
+    <form onsubmit="return toCelsius()">
+        <div id="conversao">
+            <span id="fahrenheit">Digite temperatura em Fahrenheit</span><br>
+            <input type="number" id="number" step="any" placeholder="Ex: 100">
+            <input type="submit" value="Converter">
+            <p id="resultado"></p> <!-- Elemento para exibir o resultado -->
+        </div>
+    </form>
+</body>
+</html>
